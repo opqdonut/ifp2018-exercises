@@ -15,7 +15,7 @@ Getting started
         $ stack runhaskell W0Test.hs
 
     This should print `Everything seems to be OK!`. If you see any errors,
-    you might not have a problem with your Haskell installation.
+    you might have a problem with your Haskell installation.
 
 4. Now you can edit `W1.hs` and see how well you did by running
 
