@@ -176,14 +176,14 @@ primes = go [2..]
 
 ex17_smallestDivisor_prime = do
   forAll (elements $ take 12 primes) $ \p ->
-    p === smallestDivisor p
+    smallestDivisor p === p
 
 ex17_smallestDivisor_comp = do
   k <- (elements . take 10 $ primes)
   p <- (elements . take 20 . drop 10 $ primes)
   let n = k*p
   return $ counterexample (show n) $
-           k === smallestDivisor n
+           smallestDivisor n === k
 
 ex18_isPrime =
   forAll (elements [0..max]) $ \n ->
