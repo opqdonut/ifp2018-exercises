@@ -122,6 +122,15 @@ myGcd = undefined
 --
 -- 1. All even numbers come before odd numbers
 -- 2. Within even and odd numbers the ordering is normal
+--
+-- In other words,
+-- odd numbers compare normally:
+--   funnyCompare 5 7 ==> LT
+-- even numbers compare normally:
+--   funnyCompare 8 6 ==> GT
+-- even comes before odd:
+--   funnyCompare 8 3 ==> LT
+--   funnyCompare 2 3 ==> LT
 
 funnyCompare :: Int -> Int -> Ordering
 funnyCompare = undefined
