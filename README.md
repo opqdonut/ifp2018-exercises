@@ -44,7 +44,14 @@ Working on the exercises
 
     I'm sorry if the test failures aren't always understandable :/
 
+Using GHCi
+----------
+
 - You can also play around with your solutions interactively by
   running `stack exec ghci Wn.hs` (or `ghci Wn.hs`).
   This is a good idea for instance when you don't understand the
   test failures.
+- Use the `:reload` command to reload the file if you've made
+  changes.
+- You can use the `:type` command to get the type of an expression, for example
+  `:type tail "asdf"`
