@@ -6,20 +6,30 @@ Getting started
 
 1. Install [Stack](https://www.haskellstack.org/)
 
-2. Download dependencies by running
+2. Open a terminal
 
-        $ stack build
+3. Clone this repository by running
 
-3. Then check you can actually run the tests with:
+        git clone https://github.com/opqdonut/ifp2018-exercises.git
 
-        $ stack runhaskell W0Test.hs
+4. Change directory to the cloned repository
+
+        cd ifp2018-exercises
+
+5. Download dependencies by running
+
+        stack build
+
+6. Then check you can actually run the tests with:
+
+        stack runhaskell W0Test.hs
 
     This should print `Everything seems to be OK!`. If you see any errors,
     you might have a problem with your Haskell installation.
 
-4. Now you can edit `W1.hs` and see how well you did by running
+7. Now you can edit `W1.hs` and see how well you did by running
 
-        $ stack runhaskell W1Test.hs
+        stack runhaskell W1Test.hs
 
 Working on the exercises
 ------------------------
