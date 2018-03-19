@@ -26,9 +26,9 @@ tests = [[]
         ,[ex12_tribonacci]
         ,[ex13_myGcd]
         ,[ex14_funnyCompare_even, ex14_funnyCompare_odd
-         ,ex14_funnyCompare_mixed]
+         ,property ex14_funnyCompare_mixed]
         ,[ex15_funnyMin_even, ex15_funnyMin_odd
-         ,ex15_funnyMin_mixed]
+         ,property ex15_funnyMin_mixed]
         ,[ex16_pyramid]
         ,[ex17_smallestDivisor_prime, property ex17_smallestDivisor_comp]
         ,[ex18_isPrime]
@@ -136,12 +136,12 @@ ex14_funnyCompare_odd =
   forAll (elements odds) $ \y ->
   funnyCompare x y === compare x y
 
-ex14_funnyCompare_mixed =
-  forAll (elements evens) $ \x ->
-  forAll (elements odds) $ \y ->
-  funnyCompare x y === LT
-  .&&.
-  funnyCompare y x === GT
+ex14_funnyCompare_mixed = do
+  x <- elements evens
+  y <- elements odds
+  return $ counterexample ("funnyCompare " ++ show x ++ " " ++ show y) (funnyCompare x y === LT)
+           .&&.
+           counterexample ("funnyCompare " ++ show y ++ " " ++ show x) (funnyCompare y x === GT)
 
 ex15_funnyMin_even =
   forAll (elements evens) $ \x ->
@@ -153,12 +153,12 @@ ex15_funnyMin_odd =
   forAll (elements odds) $ \y ->
   funnyMin x y === min x y
 
-ex15_funnyMin_mixed =
-  forAll (elements evens) $ \x ->
-  forAll (elements odds) $ \y ->
-  funnyMin x y === x
-  .&&.
-  funnyMin y x === x
+ex15_funnyMin_mixed = do
+  x <- elements evens
+  y <- elements odds
+  return $ counterexample ("funnyMin " ++ show x ++ " " ++ show y) (funnyMin x y === x)
+           .&&.
+           counterexample ("funnyMin " ++ show y ++ " " ++ show x) (funnyMin y x === x)
 
 split delim xs =
   case rest of [] -> [a]
