@@ -60,7 +60,7 @@ ex5_substring = do
   base <- choose (ord 'a',ord 'f')
   len <- choose (0,20)
   let list = f [base..base+len-1]
-  i <- choose (0,len)
+  i <- choose (0,len-1)
   n <- choose (0,len-i)
   return $ counterexample ("substring "++show i++" "++show n++" "++show list) $
     substring i n list === f [base+i .. base + min (i+n) (len) - 1]
