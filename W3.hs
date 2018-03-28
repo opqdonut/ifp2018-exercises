@@ -346,11 +346,12 @@ foldTree f x t = undefined
 -- colours Red, Green and Blue, and two color transformations, Mix and
 -- Darken.
 --
--- Mix means the sum of the two colors.
+-- Mix means the sum of the two colors in each rgb channel.
 --
 -- Darken means darkening the color. The Double value tells how much
 -- the color is darkened. 0.0 means no change and 1.0 means full
--- darkening, i.e. black.
+-- darkening, i.e. black. Darkening by 0.1 will have the result of
+-- each channel decreasing by 10%.
 --
 -- Implement the function rgb :: Color -> [Double] that returns a list
 -- of length three that represents the rgb value of the given color.
