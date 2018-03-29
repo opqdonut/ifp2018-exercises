@@ -258,7 +258,7 @@ insertL x t = undefined
 -- returns a tree with the same shape, but with the value at every
 -- node being the size of the subtree starting at that node.
 --
--- Tree size is defined as in Ex 9
+-- Tree size is defined as in Ex 11
 --
 -- Examples:
 --
