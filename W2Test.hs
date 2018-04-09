@@ -21,7 +21,7 @@ tests = [[]
         ,[property ex11_fromTo]
         ,[property ex12_sums]
         ,[property ex13_mylast_nonempty, property ex13_mylast_empty]
-        ,[property ex14_sorted_sorted]
+        ,[property ex14_sorted_empty, property ex14_sorted_sorted]
         ,[property ex15_sumsOf]
         ,[property ex16_merge]
         ,[property ex17_mergesort]
@@ -152,6 +152,9 @@ ex13_mylast_nonempty :: NonEmptyList Integer -> Property
 ex13_mylast_nonempty (NonEmpty xs) = mylast 0 xs === last xs
 ex13_mylast_empty :: Char -> Property
 ex13_mylast_empty i = mylast i [] === i
+
+ex14_sorted_empty =
+    counterexample "sorted []" $ sorted [] === True
 
 ex14_sorted_sorted = do
   l <- vector 5
