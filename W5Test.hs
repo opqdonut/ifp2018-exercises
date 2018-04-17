@@ -76,7 +76,7 @@ ex3 = (m_t3 :: [Int] -> Property)
 ex4_char_float =
     property $ do
       c <- choose ('a','f')
-      let f i = fromIntegral i * 1.1
+      let f i = fromIntegral i + 0.5
       i <- f <$> choose (0,10::Int)
       j <- f <$> choose (0,10::Int)
       let inp = [(c,i),(c,j)]
