@@ -25,7 +25,7 @@ import Data.List
 -- and the operator *! that takes a value and a number and produces a
 -- list that repeats the value that many times:
 --
--- True *! 3 ==> [True,True,True]
+-- 3 *! True ==> [True,True,True]
 
 (%$) :: String -> String -> String
 x %$ y = undefined
