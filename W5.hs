@@ -146,7 +146,7 @@ instance Num Vector where
 -- freqs [False,False,False,True]
 --   ==> [(3,False),(1,True)]
 
-freqs :: Eq a => [a] -> [(Int,a)]
+freqs :: (Eq a, Ord a) => [a] -> [(Int,a)]
 freqs xs = undefined
 
 ------------------------------------------------------------------------------
