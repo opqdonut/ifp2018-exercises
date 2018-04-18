@@ -222,6 +222,9 @@ instance Functor Fun where
 --   True ||| False      ==> True
 --   undefined ||| True  ==> True
 --   False ||| undefined ==> an error!
+--
+-- NB! Do not use any library functions in your definition. Just
+-- pattern matching.
 
 (|||) :: Bool -> Bool -> Bool
 x ||| y = undefined
