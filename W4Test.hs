@@ -176,7 +176,7 @@ ex16_hFetchLines = monadicIO $ do
   outs <- run $ hFetchLines h inds
 
   stop $ counterexample ("hFetchLines h "++show inds++"\nContents:\n"++unlines lines) $
-    conjoin [outs !! j === lines !! (i-1) | (j,i) <- zip [0..] inds]
+    outs === map ((lines!!).pred) inds
 
 toCSV = unlines . map (intercalate ",")
 
