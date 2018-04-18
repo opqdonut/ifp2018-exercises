@@ -170,13 +170,8 @@ instance Eq a => Eq (List a) where
   (==) = error "implement me"
 
 ------------------------------------------------------------------------------
--- Ex 13: start by reading a bit about Functors. A Functor is a thing
--- you can "map" over, e.g. lists, Maybes.
---
--- TODO reword ^
---
--- Implement the function incrementAll that takes a functorial value
--- and increments each number inside by one.
+-- Ex 13: Implement the function incrementAll that takes a functor
+-- value containing numbers and increments each number inside by one.
 --
 -- Examples:
 --   incrementAll [1,2,3]     ==>  [2,3,4]
