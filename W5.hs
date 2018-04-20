@@ -53,10 +53,14 @@ allEqual xs = undefined
 -- Ex 3: implement the function secondSmallest that returns the second
 -- smallest value in the list, or Nothing if there is no such value.
 --
+-- NB! If the smallest value of the list occurs multiple times, it is
+-- also the second smallest. See third example.
+--
 -- Examples:
 --
 -- secondSmallest [1.0] ==>  Nothing
--- secondSmallest [1,1] ==>  Just 1
+-- secondSmallest [1,2] ==> Just 2
+-- secondSmallest [1,1,2] ==>  Just 1
 -- secondSmallest [5,3,7,2,3,1]  ==>  Just 2
 
 secondSmallest :: Ord a => [a] -> Maybe a
