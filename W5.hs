@@ -87,11 +87,14 @@ incrementKey = undefined
 -- Ex 5: compute the average of a list of values of the Fractional
 -- class.
 --
+-- There is no need to handle the empty list case.
+--
 -- Hint! since Fractional is a subclass of Num, you have all
 -- arithmetic operations available
 --
 -- Hint! you can use the function fromIntegral to convert the list
 -- length to a Fractional
+
 
 average :: Fractional a => [a] -> a
 average xs = undefined
