@@ -43,11 +43,12 @@ chess = undefined
 
 ------------------------------------------------------------------------------
 -- Ex 3: Implement the function palindromify that chops a character
--- off the front and back of a string until the result is a
+-- off the front _and_ back of a string until the result is a
 -- palindrome.
 --
 -- Examples:
 --   palindromify "ab" ==> ""
+--   palindromify "aaay" ==> "aa"
 --   palindromify "xabbay" ==> "abba"
 --   palindromify "abracacabra" ==> "acaca"
 
