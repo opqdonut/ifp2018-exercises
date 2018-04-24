@@ -44,7 +44,7 @@ word = do fst <- choose ('A','Z')
 
 ex1_ok = do
   for <- word
-  sur <- word
+  sur <- word `suchThat` \w -> w /= for
   let str = for++" "++sur
   counterexample' ("readNames "++show str) $
     readNames str === Just (for,sur)
