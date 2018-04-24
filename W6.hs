@@ -164,8 +164,8 @@ update = undefined
 -- DO NOT use the functions length or filter.
 --
 -- Example:
---  runState (lengthAndSum True [False,True,False,True,False]) 0
---    ==> (5,2)
+--  runState (lengthAndSum [1,2,3,4]) 0
+--    ==> (4,10)
 
 lengthAndSum :: [Int] -> State Int Int
 lengthAndSum xs = undefined
