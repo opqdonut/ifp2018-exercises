@@ -57,8 +57,8 @@ palindromify = undefined
 
 ------------------------------------------------------------------------------
 -- Ex 4: Remove all repetitions of elements in a list. That is, if an
--- element occurs in the input list 3 times in a row, replace this
--- with 1 occurrence.
+-- element occurs in the input list 2 or more times in a row, replace
+-- this with 1 occurrence.
 --
 -- DO NOT use any library list functions like head, tail, (++) and so on.
 -- USE ONLY recursion and pattern matching to process the list.
