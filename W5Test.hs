@@ -62,6 +62,7 @@ ex2 = conjoin [m_t2 ([] :: [Bool]) True
 
 m_t3 input =
   length input > 2 ==>
+    counterexample ("secondSmallest "++show input++" evaluated to "++show (secondSmallest input)) $
     case secondSmallest input of
       Just s ->
         property $
@@ -71,7 +72,7 @@ m_t3 input =
 
 ex3 = (m_t3 :: [Int] -> Property)
           .&. (m_t3 :: [Double] -> Property)
-          .&. counterexample (show [1]) (secondSmallest ([1] :: [Int]) == Nothing)
+          .&. counterexample ("secondSmallest [1]") (secondSmallest ([1] :: [Int]) === Nothing)
 
 ex4_char_float =
     property $ do
