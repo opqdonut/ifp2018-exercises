@@ -443,6 +443,10 @@ instance Monad Result where
 -- You might find it easier to start with the Functor instance
 --
 -- Examples:
+--   runSL (fmap (+1) getSL) 13
+--      ==> (14,13,[])
+--   runSL (fmap (const True) (msgSL "hello")) 17
+--      ==> (True,17,["hello"])
 --   runSL (putSL 2 >> msgSL "hello" >> getSL) 0
 --      ==> (2,2,["hello"])
 --   runSL (replicateM_ 5 (modifySL (+1) >> getSL >>= \x -> msgSL ("got "++show x))) 1

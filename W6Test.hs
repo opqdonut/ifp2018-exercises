@@ -32,8 +32,8 @@ tests = [[property ex1_ok, property ex1_fail]
         ,[property ex14]
         ,[property ex15_sumNotTwice]
         ,[property ex16]
-        ,[property ex17_1, property ex17_2, property ex17_stress]
-        ,[property ex17_1, property ex17_2, property ex17_stress]
+        ,[property ex17_fmap_1, property ex17_fmap_2, property ex17_1, property ex17_2, property ex17_stress]
+        ,[property ex17_fmap_1, property ex17_fmap_2, property ex17_1, property ex17_2, property ex17_stress]
         ]
 
 -- -- -- -- -- -- -- --
@@ -288,7 +288,7 @@ ex17_fmap_1 =
   do i <- choose (0,10)
      let op = fmap (+1) getSL
      counterexample' ("runSL (fmap (+1) getSL) " ++ show i) $
-       runSL op i === (i,i+1,[])
+       runSL op i === (i+1,i,[])
 
 ex17_fmap_2 =
   do m <- word
