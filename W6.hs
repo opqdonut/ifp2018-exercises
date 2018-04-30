@@ -405,7 +405,7 @@ fsum acc x = undefined
 --   MkResult 1 >> Failure "boom" >> MkResult 2
 --     ==> Failure "boom"
 --   MkResult 1 >> NoResult >> Failure "not reached"
---     ==> NoResult 
+--     ==> NoResult
 --   MkResult 1 >>= (\x -> MkResult (x+1))
 --     ==> MkResult 2
 
