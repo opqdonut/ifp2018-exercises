@@ -160,7 +160,7 @@ update = undefined
 -- elements in the state. Additionally you should return the length of
 -- the list.
 --
--- Do this by implementing a recursive State operation lengthAndCount.
+-- Do this by implementing a recursive State operation lengthAndSum.
 -- DO NOT use the functions length or filter.
 --
 -- Example:
