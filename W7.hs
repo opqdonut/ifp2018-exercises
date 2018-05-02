@@ -63,6 +63,9 @@ palindromify = undefined
 -- DO NOT use any library list functions like head, tail, (++) and so on.
 -- USE ONLY recursion and pattern matching to process the list.
 --
+-- It's ok to use (==) or compare obviously. If-then-else and guards
+-- are fine too as long as you pattern match the list.
+--
 -- Examples:
 --   unrepeat [True,True,True,True] => [True]
 --   unrepeat [1,1,2,1,3,3,3] => [1,2,1,3]
