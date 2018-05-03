@@ -80,7 +80,7 @@ myDrop :: Maybe Int -> Maybe [a] -> Maybe [a]
 myDrop mi ml = undefined
 
 ------------------------------------------------------------------------------
--- Ex 3: given a list of indices and a list of values, return the sum
+-- Ex 3: given a list of values and a list of indices, return the sum
 -- of the values in the given indices. You should fail if any of the
 -- indices is too large or too small.
 --
@@ -91,9 +91,9 @@ myDrop mi ml = undefined
 -- Hint! implementa a function safeIndex :: [a] -> Int -> Maybe a
 --
 -- Examples:
---  selectSum [0..10] [4,6,9]
---    Just 19
---  selectSum [0..10] [4,6,9,20]
+--  selectSum [2,7,5,3,9] [0,2,4]
+--    Just 16
+--  selectSum [2,7,5,3,9] [0,2,5]
 --    Nothing
 
 selectSum :: Num a => [a] -> [Int] -> Maybe a
