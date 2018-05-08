@@ -112,10 +112,15 @@ ex7 = property $ do
                    ,counterexample (bo si "==" sj) $ (si == sj) === False
                    ,counterexample (bo si "==" si) $ (si == si) === True
                    ,counterexample (bo Joker "==" Joker) $ (Joker == Joker) === True
+                   ,counterexample (bo si "==" Joker) $ (si == Joker) === False
+                   ,counterexample (bo Joker "==" hi) $ (Joker == hi) === False
                    ,counterexample (bo hi "<=" hj) $ (hi <= hj) === (i <= j)
                    ,counterexample (bo si "<=" sj) $ (si <= sj) === (i <= j)
                    ,counterexample (bo si "<=" hj) $ (si <= hj) === True
-                   ,counterexample (bo hi "<=" sj) $ (hi <= sj) === False]
+                   ,counterexample (bo hi "<=" sj) $ (hi <= sj) === False
+                   ,counterexample (bo hi "<=" Joker) $ (hi <= Joker) === True
+                   ,counterexample (bo Joker "<=" hi) $ (Joker <= hi) === False
+                   ,counterexample (bo si "<=" Joker) $ (si <= Joker) === True]
 
 ex8_simple a b c d =
     counterexample ("fmap succ "++show input) $ fmap succ input === output
